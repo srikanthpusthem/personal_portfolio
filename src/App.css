@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body, h1, h2, p {
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-color: #ffffff; /* white */
+  --secondary-color: #000000; /* black */
+  --accent-color: #db4437; /* red */
+  --text-color: #333333; /* dark gray */
+  --subtext-color: #757575; /* medium gray */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.App-header nav a.active, .App-header nav a:hover {
+  color: var(--accent-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Reset some default browser styles and set global styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+body {
+  background-color: #f7f7f7; /* Light grey background for the whole page */
+  color: #2c3e50; /* A darker grey for text to ensure readability */
+  line-height: 1.6; /* More readable line height */
+}
+
+/* Apply a global box-sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Style for common section components */
+.section {
+  margin: 60px auto; /* More vertical space */
+  padding: 40px;
+  background: #fff; /* White background for content sections */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 4px; /* Slightly rounded corners */
+  border: 1px solid #eaeaea; /* Light border for a subtle definition */
+  background: #fafafa; /* Very light grey to reduce contrast */
+}
+
+/* Max width for the content to ensure it's not too wide on large screens */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

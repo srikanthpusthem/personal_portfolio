@@ -1,0 +1,35 @@
+/* Projects.css */
+.section#projects {
+  padding: 4rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.section#projects h2 {
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.project-item {
+  background: var(--primary-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #eaeaea;
+}
+
+.project-item h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: var(--subtext-color);
+  line-height: 1.6;
+}
