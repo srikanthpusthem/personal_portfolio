@@ -1,6 +1,5 @@
 /* About.css */
 .section#about {
-  text-align: center;
   padding: 4rem 2rem;
   color: var(--text-color);
   font-family: 'Poppins', sans-serif;
@@ -10,7 +9,6 @@
   margin-bottom: 2rem;
   color: var(--secondary-color);
   font-size: 2.5rem;
-  font-weight: 600;
 }
 
 .section#about p {
@@ -18,5 +16,34 @@
   color: var(--subtext-color);
   line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
+}
+
+.education-experience {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.education, .experience {
+  flex-basis: 45%;
+  min-width: 300px;
+}
+
+.education h3, .experience h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.education ul, .experience ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.education li, .experience li {
+  background: #f2f2f2;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
 }
