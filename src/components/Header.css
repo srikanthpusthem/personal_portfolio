@@ -24,6 +24,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: padding 0.3s ease-in-out;
+}
+
+.App-header.scrolled {
+  padding-top: 0.5rem; /* Reduced top padding when scrolled */
+  padding-bottom: 0.5rem; /* Reduced bottom padding when scrolled */
 }
 
 .header-name {
@@ -36,11 +42,22 @@ body {
   color: #757575; /* Or any other color that fits your design */
   margin-top: 0.1rem; /* Space between the name and caption */
 }
+
 .profile-pic {
   width: 100px; /* Adjust size as needed */
   height: 100px; /* Adjust size as needed */
   border-radius: 50%; /* Makes the image round */
   margin-right: 20px; /* Adds space between the image and the name */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for moving the image */
+}
+
+.App-header.scrolled .profile-pic.move-left {
+  transform: translateX(-210%); /* Moves the image to the left */
+}
+
+.App-header.scrolled .header-name.move-up {
+  transform: translateY(-110%); /* Moves the header name up */
+  transition: transform 0.3s ease-in-out;
 }
 
 .header-content {
@@ -48,9 +65,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column; /* Stack the image and name vertically */
+  transition: margin-bottom 0.3s ease-in-out;
 }
 
-
+.App-header.scrolled .header-content {
+  margin-bottom: 0; /* Reduces space between header content and nav */
+}
 
 .App-header h1 {
   margin: 0;
@@ -62,6 +82,12 @@ body {
   justify-content: center;
   width: 100%; /* Take the full width */
   padding: 1rem 0;
+  margin-top: 1rem; /* Initial space between title and nav */
+  transition: padding-top 0.3s ease-in-out;
+}
+
+.App-header.scrolled .header-nav {
+  padding-top: 0.5rem; /* Reduced space above nav links when scrolled */
 }
 
 .App-header nav a {
@@ -74,10 +100,8 @@ body {
 
 .App-header nav a:hover, .App-header nav a.active {
   color: var(--accent-color);
-  
 }
 
-/* You might want to add a class to the active navigation link */
 .App-header nav a.active {
   border-bottom: 2px solid #403e3e; /* Highlight the active section */
 }
