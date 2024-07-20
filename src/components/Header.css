@@ -1,11 +1,11 @@
 /* Header.css */
 
 :root {
-  --primary-color: #ffffff; /* white */
-  --secondary-color: #000000; /* black */
-  --accent-color: #db4437; /* red */
-  --text-color: #333333; /* dark gray */
-  --subtext-color: #757575; /* medium gray */
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --accent-color: #db4437;
+  --text-color: #333333;
+  --subtext-color: #757575;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 .App-header {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items vertically */
+  align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
   background-color: var(--primary-color);
@@ -27,73 +27,156 @@ body {
   transition: padding 0.3s ease-in-out;
 }
 
-.App-header.scrolled {
-  padding-top: 0.5rem; /* Reduced top padding when scrolled */
-  padding-bottom: 0.5rem; /* Reduced bottom padding when scrolled */
-}
-
-.header-name {
-  text-align: center;
-  width: 100%; /* Take the full width */
-}
-
-.header-caption {
-  font-size: 0.9rem; /* Adjust the size as needed */
-  color: #757575; /* Or any other color that fits your design */
-  margin-top: 0.1rem; /* Space between the name and caption */
-}
-
-.profile-pic {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
-  border-radius: 50%; /* Makes the image round */
-  margin-right: 20px; /* Adds space between the image and the name */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for moving the image */
-}
-
-.App-header.scrolled .profile-pic.move-left {
-  transform: translateX(-210%); /* Moves the image to the left */
-}
-
-.App-header.scrolled .header-name.move-up {
-  transform: translateY(-110%); /* Moves the header name up */
-  transition: transform 0.3s ease-in-out;
-}
-
 .header-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Stack the image and name vertically */
-  transition: margin-bottom 0.3s ease-in-out;
+  flex-direction: column;
 }
 
-.App-header.scrolled .header-content {
-  margin-bottom: 0; /* Reduces space between header content and nav */
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  /* Transition for transform will make changes smooth */
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-name {
+  text-align: center;
+  width: 100%;
+}
+
+.header-caption {
+  font-size: 0.9rem;
+  color: var(--subtext-color);
+  margin-top: 0.1rem;
 }
 
 .App-header h1 {
   margin: 0;
-  font-size: 2rem; /* Larger font size for the name */
+  font-size: 2rem;
 }
 
 .header-nav {
   display: flex;
   justify-content: center;
-  width: 100%; /* Take the full width */
+  width: 100%;
   padding: 1rem 0;
-  margin-top: 1rem; /* Initial space between title and nav */
   transition: padding-top 0.3s ease-in-out;
 }
 
-.App-header.scrolled .header-nav {
-  padding-top: 0.5rem; /* Reduced space above nav links when scrolled */
-}
+.App-header nav a {/* Header.css */
 
-.App-header nav a {
+  :root {
+    --primary-color: #ffffff; /* white */
+    --secondary-color: #000000; /* black */
+    --accent-color: #db4437; /* red */
+    --text-color: #333333; /* dark gray */
+    --subtext-color: #757575; /* medium gray */
+  }
+  
+  body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: padding 0.3s ease-in-out;
+  }
+  
+  .App-header.scrolled {
+    padding-top: 0.5rem; /* Reduced top padding when scrolled */
+    padding-bottom: 0.5rem; /* Reduced bottom padding when scrolled */
+  }
+  
+  .header-name {
+    text-align: center;
+    width: 100%; /* Take the full width */
+  }
+  
+  .header-caption {
+    font-size: 0.9rem; /* Adjust the size as needed */
+    color: #757575; /* Or any other color that fits your design */
+    margin-top: 0.1rem; /* Space between the name and caption */
+  }
+  
+  .profile-pic {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 20px; /* Adds space between the image and the name */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for moving the image */
+  }
+  
+  .App-header.scrolled .profile-pic.move-left {
+    transform: translateX(-210%); /* Moves the image to the left */
+  }
+  
+  .App-header.scrolled .header-name.move-up {
+    transform: translateY(-110%); /* Moves the header name up */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack the image and name vertically */
+    transition: margin-bottom 0.3s ease-in-out;
+  }
+  
+  .App-header.scrolled .header-content {
+    margin-bottom: 0; /* Reduces space between header content and nav */
+  }
+  
+  .App-header h1 {
+    margin: 0;
+    font-size: 2rem; /* Larger font size for the name */
+  }
+  
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Take the full width */
+    padding: 1rem 0;
+    margin-top: 1rem; /* Initial space between title and nav */
+    transition: padding-top 0.3s ease-in-out;
+  }
+  
+  .App-header.scrolled .header-nav {
+    padding-top: 0.5rem; /* Reduced space above nav links when scrolled */
+  }
+  
+  .App-header nav a {
+    margin: 0 10px;
+    padding: 10px 15px;
+    color: #757575;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .App-header nav a:hover, .App-header nav a.active {
+    color: var(--accent-color);
+  }
+  
+  .App-header nav a.active {
+    border-bottom: 2px solid #403e3e; /* Highlight the active section */
+  }
   margin: 0 10px;
   padding: 10px 15px;
-  color: #757575;
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -103,5 +186,5 @@ body {
 }
 
 .App-header nav a.active {
-  border-bottom: 2px solid #403e3e; /* Highlight the active section */
+  border-bottom: 2px solid #403e3e;
 }

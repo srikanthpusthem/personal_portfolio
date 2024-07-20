@@ -57,7 +57,7 @@ body {
 /* Style for common section components */
 .section {
   margin: 60px auto; /* More vertical space */
-  padding: 40px;
+  padding: 10px;
   background: #fff; /* White background for content sections */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border-radius: 4px; /* Slightly rounded corners */
